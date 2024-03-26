@@ -2,5 +2,7 @@ services:
   app:
     container_name: app
     build: .
+    environment:
+      - ADMIN_ENDPOINT=$ADMIN_ENDPOINT
     ports:
       - 4321:4321
