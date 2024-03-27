@@ -19,7 +19,6 @@ export const fetchAllPosts = async () => {
                 sourceUrl
               }
             }
-            content
           }
         }
       }
@@ -27,7 +26,7 @@ export const fetchAllPosts = async () => {
   })
 
   const data: PostsFetched = (await res.json()) as PostsFetched
-  return data.data.posts?.nodes
+  return data.data.posts
 }
 
 type PostFetched = {
@@ -43,6 +42,11 @@ export const fetchPost = async (id: string) => {
           date
           uri
           content
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
         }
       }
     `,

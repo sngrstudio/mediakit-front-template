@@ -1,0 +1,18 @@
+---
+import Layout from '~/layouts/layout.astro'
+import { fetchCategory } from '~/data/category'
+
+const category = await fetchCategory(Astro.url.pathname)
+if (!category) return Astro.redirect('/404')
+---
+
+<Layout>
+  <main>
+    <article>
+      <hgroup>
+        <h1 set:html={category.name} />
+        <p>{category.description}</p>
+      </hgroup>
+    </article>
+  </main>
+</Layout>

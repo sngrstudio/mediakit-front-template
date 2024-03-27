@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/layout.astro'
+import { Image } from 'astro:assets'
 import { fetchPost } from '~/data/posts'
 
 const post = await fetchPost(Astro.url.pathname)
@@ -12,6 +13,16 @@ if (!post) return Astro.redirect('/404')
       <hgroup>
         <h1 set:html={post.title} />
         <p><time datetime={post.date}>{post.date}</time></p>
+        {
+          post.featuredImage && (
+            <Image
+              src={post.featuredImage.node.sourceUrl!}
+              alt={post.title}
+              loading="eager"
+              inferSize
+            />
+          )
+        }
       </hgroup>
 
       <Fragment set:html={post.content} />
