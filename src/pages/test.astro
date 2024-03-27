@@ -1,8 +1,10 @@
 ---
-import { Debug } from "astro:components";
-import { fetchPost } from "~/data/posts"
+import { Debug } from 'astro:components'
+import { fetchPost } from '~/data/posts'
 
-const data = await fetchPost("/dprd/dprd-kotim/2023/12/ini-harapan-ketua-dprd-kotim-kepada-kades-yang-baru-dilantik/")
+const data = await fetchPost(
+  '/berita/2023/12/12/ini-harapan-ketua-dprd-kotim-kepada-kades-yang-baru-dilantik/'
+)
 ---
 
 <Debug {data} />

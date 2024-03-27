@@ -1,0 +1,20 @@
+---
+import Layout from '~/layouts/layout.astro'
+import { fetchPost } from '~/data/posts'
+
+const post = await fetchPost(Astro.url.pathname)
+if (!post) return Astro.redirect('/404')
+---
+
+<Layout>
+  <main>
+    <article>
+      <hgroup>
+        <h1 set:html={post.title} />
+        <p><time datetime={post.date}>{post.date}</time></p>
+      </hgroup>
+
+      <Fragment set:html={post.content} />
+    </article>
+  </main>
+</Layout>

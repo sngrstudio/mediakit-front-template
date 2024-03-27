@@ -1,15 +1,15 @@
 ---
-import BaseLayout from "./base.astro";
+import BaseLayout from './base.astro'
 ---
 
 <BaseLayout>
-    {/* <head/> */}
-    <Fragment slot="head">
-        <slot name="head" />
-    </Fragment>
+  {/* <head/> */}
+  <Fragment slot="head">
+    <slot name="head" />
+  </Fragment>
 
-    {/* <body/> */}
-    <Fragment >
-        <slot />
-    </Fragment>
+  {/* <body/> */}
+  <Fragment>
+    <slot />
+  </Fragment>
 </BaseLayout>

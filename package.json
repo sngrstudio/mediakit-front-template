@@ -1,14 +1,15 @@
 {
-  "name": "",
-  "type": "module",
+  "name": "mediakit-front-template",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
     "astro": "astro",
-    "codegen": "graphql-codegen --config codegen.ts"
+    "build": "astro check && astro build",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "dev": "astro dev",
+    "format": "prettier --write .",
+    "preview": "astro preview",
+    "start": "astro dev"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
@@ -20,6 +21,8 @@
   "devDependencies": {
     "@graphql-codegen/cli": "5.0.2",
     "@graphql-codegen/typescript": "4.0.6",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0"
   }
 }
