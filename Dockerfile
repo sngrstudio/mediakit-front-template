@@ -15,17 +15,17 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 COPY . .
 RUN pnpm run build
 
-FROM oven/bun:1.0.35-slim AS runtime
+FROM node:20.11.1-bookworm-slim AS runtime
 RUN apt update && apt install -y --no-install-recommends dumb-init
 WORKDIR /usr/src/app
 
-USER bun
-COPY --chown=bun:bun --from=prod-deps /usr/src/app/node_modules ./node_modules
-COPY --chown=bun:bun --from=builder /usr/src/app/dist ./dist
+USER node
+COPY --chown=node:node --from=prod-deps /usr/src/app/node_modules ./node_modules
+COPY --chown=node:node --from=builder /usr/src/app/dist ./dist
 
 ENV NODE_ENV=production
 ENV HOST=0.0.0.0
 ENV PORT=4321
 EXPOSE 4321
 
-CMD ["dumb-init", "bun", "run", "./dist/server/entry.mjs"]
+CMD ["dumb-init", "node", "./dist/server/entry.mjs"]
