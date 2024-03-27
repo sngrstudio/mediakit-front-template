@@ -6,7 +6,7 @@ type CategoryFetched = {
 }
 
 export const fetchCategory = async (id: string) => {
-  const res = await fetchData({
+  return (await fetchData({
     query: gql`
       query fetchCategoryQuery($id: ID!) {
         category(id: $id, idType: URI) {
@@ -18,8 +18,5 @@ export const fetchCategory = async (id: string) => {
     variables: {
       id,
     },
-  })
-
-  const data: CategoryFetched = (await res.json()) as CategoryFetched
-  return data.data.category
+  })) as CategoryFetched
 }

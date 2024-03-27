@@ -2,17 +2,24 @@
 import Layout from '~/layouts/layout.astro'
 import { fetchCategory } from '~/data/category'
 
-const category = await fetchCategory(Astro.url.pathname)
+const {
+  data: { category },
+} = await fetchCategory(Astro.url.pathname)
 if (!category) return Astro.redirect('/404')
 ---
 
 <Layout>
   <main>
-    <article>
+    <section>
       <hgroup>
         <h1 set:html={category.name} />
         <p>{category.description}</p>
       </hgroup>
-    </article>
+    </section>
+    <section
+      hx-get={`/partials/list?category=${encodeURIComponent(category.name as string)}`}
+      hx-trigger="load"
+    >
+    </section>
   </main>
 </Layout>

@@ -1,0 +1,61 @@
+---
+import { fetchPostsList } from '~/data/postslist'
+import { Image } from 'astro:assets'
+
+const params = new URL(Astro.url).searchParams
+const category = params.get('category')
+const after = params.get('after')
+
+const {
+  data: { posts },
+} = await fetchPostsList({
+  category: category!,
+  after: after || '',
+})
+
+export const partial = true
+---
+
+<p>{Astro.url}</p>
+<Fragment>
+  {
+    posts &&
+      posts.nodes.map((post, i) => {
+        if (posts.pageInfo.hasNextPage && i + 1 === posts.nodes.length) {
+          return (
+            <article
+              hx-get={`${Astro.url.pathname}?category=${encodeURIComponent(category!)}&after=${posts.pageInfo.endCursor}`}
+              hx-swap="afterend"
+              hx-trigger="revealed"
+            >
+              <h3 set:html={post.title} />
+              {post.featuredImage && (
+                <Image
+                  src={post.featuredImage.node.sourceUrl!}
+                  width={200}
+                  height={150}
+                  alt={post.title}
+                />
+              )}
+              <Fragment set:html={post.excerpt} />
+            </article>
+          )
+        } else {
+          return (
+            <article>
+              <h3 set:html={post.title} />
+              {post.featuredImage && (
+                <Image
+                  src={post.featuredImage.node.sourceUrl!}
+                  width={200}
+                  height={150}
+                  alt={post.title}
+                />
+              )}
+              <Fragment set:html={post.excerpt} />
+            </article>
+          )
+        }
+      })
+  }
+</Fragment>

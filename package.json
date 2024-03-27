@@ -12,10 +12,15 @@
     "start": "astro dev"
   },
   "dependencies": {
+    "@astrojs/alpinejs": "^0.4.0",
     "@astrojs/check": "^0.5.10",
     "@astrojs/node": "^8.2.5",
+    "@types/alpinejs": "^3.13.10",
+    "alpinejs": "^3.13.7",
     "astro": "^4.5.9",
+    "astro-htmx": "^1.0.5",
     "graphql": "^16.8.1",
+    "htmx.org": "^1.9.11",
     "typescript": "^5.4.3"
   },
   "devDependencies": {

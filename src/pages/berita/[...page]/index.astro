@@ -3,7 +3,9 @@ import Layout from '~/layouts/layout.astro'
 import { Image } from 'astro:assets'
 import { fetchPost } from '~/data/posts'
 
-const post = await fetchPost(Astro.url.pathname)
+const {
+  data: { post },
+} = await fetchPost(Astro.url.pathname)
 if (!post) return Astro.redirect('/404')
 ---
 
@@ -11,7 +13,7 @@ if (!post) return Astro.redirect('/404')
   <main>
     <article>
       <hgroup>
-        <h1 set:html={post.title} />
+        <h1 set:html={post} />
         <p><time datetime={post.date}>{post.date}</time></p>
         {
           post.featuredImage && (
