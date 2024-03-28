@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './base.astro'
+import Header from './header.astro'
 ---
 
 <BaseLayout>
@@ -10,6 +11,7 @@ import BaseLayout from './base.astro'
 
   {/* <body/> */}
   <Fragment>
+    <Header />
     <slot />
   </Fragment>
 </BaseLayout>

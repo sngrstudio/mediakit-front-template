@@ -1,0 +1,20 @@
+---
+// @ts-nocheck
+import { fetchLogo } from '~/data/site'
+import { Image } from 'astro:assets'
+
+const {
+  data: { mediaItems: data },
+} = await fetchLogo()
+const logo = data!.nodes.at(0)!.sourceUrl
+---
+
+<header>
+  <nav>
+    <div>
+      <a href="/">
+        <Image src={logo} width={50} height={50} alt="" />
+      </a>
+    </div>
+  </nav>
+</header>

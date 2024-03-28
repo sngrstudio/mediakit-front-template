@@ -17,7 +17,6 @@ const {
 export const partial = true
 ---
 
-<p>{Astro.url}</p>
 <Fragment>
   {
     posts &&
@@ -29,7 +28,9 @@ export const partial = true
               hx-swap="afterend"
               hx-trigger="revealed"
             >
-              <h3 set:html={post.title} />
+              <h3>
+                <a href={post.uri}>{post.title}</a>
+              </h3>
               {post.featuredImage && (
                 <Image
                   src={post.featuredImage.node.sourceUrl!}
@@ -44,7 +45,9 @@ export const partial = true
         } else {
           return (
             <article>
-              <h3 set:html={post.title} />
+              <h3>
+                <a href={post.uri}>{post.title}</a>
+              </h3>
               {post.featuredImage && (
                 <Image
                   src={post.featuredImage.node.sourceUrl!}
