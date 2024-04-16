@@ -4,12 +4,18 @@ import { fetchCategory } from '~/data/category'
 
 const {
   data: { category },
-} = await fetchCategory('/berita/category/berita-utama')
+} = await fetchCategory(Astro.url.pathname)
 if (!category) return Astro.redirect('/404')
 ---
 
 <Layout>
   <main>
+    <section>
+      <hgroup>
+        <h1 set:html={category.name} />
+        <p>{category.description}</p>
+      </hgroup>
+    </section>
     <section
       hx-get={`/partials/list?category=${encodeURIComponent(category.name as string)}`}
       hx-trigger="load"

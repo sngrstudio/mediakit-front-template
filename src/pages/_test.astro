@@ -1,0 +1,11 @@
+---
+import { Debug } from 'astro:components'
+// import { fetchPost } from '~/data/posts'
+import { fetchPostsList } from '~/data/postslist'
+
+const {
+  data: { posts },
+} = await fetchPostsList({ category: 'Budaya' })
+---
+
+<Debug {posts} />

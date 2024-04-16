@@ -1,0 +1,32 @@
+---
+import Layout from '~/layouts/layout.astro'
+import { Image } from 'astro:assets'
+import { fetchPage } from '~/data/pages'
+
+const {
+  data: { page },
+} = await fetchPage(Astro.url.pathname)
+if (!page) return Astro.redirect('/404')
+---
+
+<Layout>
+  <main>
+    <article>
+      <hgroup>
+        <h1 set:html={page.title} />
+        {
+          page.featuredImage && (
+            <Image
+              src={page.featuredImage.node.sourceUrl!}
+              alt={page.title}
+              loading="eager"
+              inferSize
+            />
+          )
+        }
+      </hgroup>
+
+      <Fragment set:html={page.content} />
+    </article>
+  </main>
+</Layout>
