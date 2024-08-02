@@ -1,4 +1,4 @@
-FROM node:20.11.1-bookworm AS base
+FROM node:20.16.0-bookworm AS base
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable
@@ -15,7 +15,7 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 COPY . .
 RUN pnpm run build
 
-FROM node:20.11.1-bookworm-slim AS runtime
+FROM node:20.16.0-bookworm-slim AS runtime
 RUN apt update && apt install -y --no-install-recommends dumb-init
 WORKDIR /usr/src/app
 
