@@ -13,7 +13,7 @@ dependencies:
     version: 0.9.1(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
   '@astrojs/node':
     specifier: 8.3.3
-    version: 8.3.3(astro@4.14.2)
+    version: 8.3.3(astro@4.14.5)
   '@types/alpinejs':
     specifier: 3.13.10
     version: 3.13.10
@@ -21,11 +21,11 @@ dependencies:
     specifier: 3.14.1
     version: 3.14.1
   astro:
-    specifier: 4.14.2
-    version: 4.14.2(typescript@5.5.4)
+    specifier: 4.14.5
+    version: 4.14.5(typescript@5.5.4)
   astro-htmx:
     specifier: 1.0.6
-    version: 1.0.6(astro@4.14.2)(htmx.org@1.9.12)
+    version: 1.0.6(astro@4.14.5)(htmx.org@1.9.12)
   graphql:
     specifier: 16.9.0
     version: 16.9.0
@@ -188,7 +188,7 @@ packages:
       remark-parse: 11.0.0
       remark-rehype: 11.1.0
       remark-smartypants: 3.0.2
-      shiki: 1.12.1
+      shiki: 1.14.1
       unified: 11.0.5
       unist-util-remove-position: 5.0.0
       unist-util-visit: 5.0.0
@@ -198,12 +198,12 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/node@8.3.3(astro@4.14.2):
+  /@astrojs/node@8.3.3(astro@4.14.5):
     resolution: {integrity: sha512-idrKhnnPSi0ABV+PCQsRQqVNwpOvVDF/+fkwcIiE8sr9J8EMvW9g/oyAt8T4X2OBJ8FUzYPL8klfCdG7r0eB5g==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
-      astro: 4.14.2(typescript@5.5.4)
+      astro: 4.14.5(typescript@5.5.4)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -2106,8 +2106,8 @@ packages:
     dev: false
     optional: true
 
-  /@shikijs/core@1.12.1:
-    resolution: {integrity: sha512-biCz/mnkMktImI6hMfMX3H9kOeqsInxWEyCHbSlL8C/2TR1FqfmGxTLRNwYCKsyCyxWLbB8rEqXRVZuyxuLFmA==}
+  /@shikijs/core@1.14.1:
+    resolution: {integrity: sha512-KyHIIpKNaT20FtFPFjCQB5WVSTpLR/n+jQXhWHWVUMm9MaOaG9BGOG0MSyt7yA4+Lm+4c9rTc03tt3nYzeYSfw==}
     dependencies:
       '@types/hast': 3.0.4
     dev: false
@@ -2461,18 +2461,18 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /astro-htmx@1.0.6(astro@4.14.2)(htmx.org@1.9.12):
+  /astro-htmx@1.0.6(astro@4.14.5)(htmx.org@1.9.12):
     resolution: {integrity: sha512-CSpII8wU5hsz1Q6abkKRGImOoQB+tVflZlh4wEc/lsZk4y3Mq9Z4sS9ehRvceg4UkY+6Pt64g8EOOdCCtQOBww==}
     peerDependencies:
       astro: '>= 3.0.0'
       htmx.org: '>= 1.9.0'
     dependencies:
-      astro: 4.14.2(typescript@5.5.4)
+      astro: 4.14.5(typescript@5.5.4)
       htmx.org: 1.9.12
     dev: false
 
-  /astro@4.14.2(typescript@5.5.4):
-    resolution: {integrity: sha512-x9VeYx8Ih6kYKBMVwwsfRzsZVq30+SUhiawnYQ6+46qQnEx3zH05KcH24HsJMe6dVpHD8HdH7CWR5C4o7Q/jeg==}
+  /astro@4.14.5(typescript@5.5.4):
+    resolution: {integrity: sha512-sv47kPE6FnvyxxHHcCePNwTKpOMKBq0r1m6WZYg6ag9j3yF9m72ov64NFB7c+hAMDUKgsHfVdLKjOOqDC/c+fA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
@@ -2529,7 +2529,7 @@ packages:
       prompts: 2.4.2
       rehype: 13.0.1
       semver: 7.6.3
-      shiki: 1.12.1
+      shiki: 1.14.1
       string-width: 7.2.0
       strip-ansi: 7.1.0
       tsconfck: 3.1.1(typescript@5.5.4)
@@ -5500,10 +5500,10 @@ packages:
     resolution: {integrity: sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==}
     dev: true
 
-  /shiki@1.12.1:
-    resolution: {integrity: sha512-nwmjbHKnOYYAe1aaQyEBHvQymJgfm86ZSS7fT8OaPRr4sbAcBNz7PbfAikMEFSDQ6se2j2zobkXvVKcBOm0ysg==}
+  /shiki@1.14.1:
+    resolution: {integrity: sha512-FujAN40NEejeXdzPt+3sZ3F2dx1U24BY2XTY01+MG8mbxCiA2XukXdcbyMyLAHJ/1AUUnQd1tZlvIjefWWEJeA==}
     dependencies:
-      '@shikijs/core': 1.12.1
+      '@shikijs/core': 1.14.1
       '@types/hast': 3.0.4
     dev: false
 
