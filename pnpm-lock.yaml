@@ -12,8 +12,8 @@ dependencies:
     specifier: 0.9.3
     version: 0.9.3(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.6.2)
   '@astrojs/node':
-    specifier: 8.3.3
-    version: 8.3.3(astro@4.15.6)
+    specifier: 8.3.4
+    version: 8.3.4(astro@4.15.6)
   '@types/alpinejs':
     specifier: 3.13.10
     version: 3.13.10
@@ -200,13 +200,13 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/node@8.3.3(astro@4.15.6):
-    resolution: {integrity: sha512-idrKhnnPSi0ABV+PCQsRQqVNwpOvVDF/+fkwcIiE8sr9J8EMvW9g/oyAt8T4X2OBJ8FUzYPL8klfCdG7r0eB5g==}
+  /@astrojs/node@8.3.4(astro@4.15.6):
+    resolution: {integrity: sha512-xzQs39goN7xh9np9rypGmbgZj3AmmjNxEMj9ZWz5aBERlqqFF3n8A/w/uaJeZ/bkHS60l1BXVS0tgsQt9MFqBA==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
       astro: 4.15.6(typescript@5.6.2)
-      send: 0.18.0
+      send: 0.19.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
       - supports-color
@@ -821,7 +821,7 @@ packages:
       '@babel/parser': 7.25.6
       '@babel/template': 7.25.0
       '@babel/types': 7.25.6
-      debug: 4.3.6
+      debug: 4.3.7
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -2411,7 +2411,7 @@ packages:
     resolution: {integrity: sha512-o/zjMZRhJxny7OyEF+Op8X+efiELC7k7yOjMzgfzVqOzXqkBkWI79YoTdOtsuWd5BWhAGAuOY/Xa6xpiaWXiNg==}
     engines: {node: '>= 14'}
     dependencies:
-      debug: 4.3.6
+      debug: 4.3.7
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3108,6 +3108,7 @@ packages:
         optional: true
     dependencies:
       ms: 2.1.2
+    dev: true
 
   /debug@4.3.7:
     resolution: {integrity: sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==}
@@ -3849,7 +3850,7 @@ packages:
     engines: {node: '>= 14'}
     dependencies:
       agent-base: 7.1.0
-      debug: 4.3.6
+      debug: 4.3.7
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3859,7 +3860,7 @@ packages:
     engines: {node: '>= 14'}
     dependencies:
       agent-base: 7.1.0
-      debug: 4.3.6
+      debug: 4.3.7
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4767,6 +4768,7 @@ packages:
 
   /ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
+    dev: true
 
   /ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
@@ -5476,8 +5478,8 @@ packages:
     hasBin: true
     dev: false
 
-  /send@0.18.0:
-    resolution: {integrity: sha512-qqWzuOjSFOuqPjFe4NOsMLafToQQwBSOEpS+FwEt3A2V3vKubTquT3vmLTQpFgMXp8AlFWFuP1qKaJZOtPpVXg==}
+  /send@0.19.0:
+    resolution: {integrity: sha512-dW41u5VfLXu8SJh5bwRmyYUbAoSB3c9uQh6L8h/KtsFREPWpbX1lrljJo186Jc4nmci/sGUZ9a0a0J2zgfq2hw==}
     engines: {node: '>= 0.8.0'}
     dependencies:
       debug: 2.6.9
