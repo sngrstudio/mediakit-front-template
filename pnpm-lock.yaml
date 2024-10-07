@@ -25,13 +25,13 @@ dependencies:
     version: 4.15.11(typescript@5.6.2)
   astro-htmx:
     specifier: 1.0.6
-    version: 1.0.6(astro@4.15.11)(htmx.org@1.9.12)
+    version: 1.0.6(astro@4.15.11)(htmx.org@2.0.3)
   graphql:
     specifier: 16.9.0
     version: 16.9.0
   htmx.org:
-    specifier: 1.9.12
-    version: 1.9.12
+    specifier: 2.0.3
+    version: 2.0.3
   typescript:
     specifier: 5.6.2
     version: 5.6.2
@@ -2528,14 +2528,14 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /astro-htmx@1.0.6(astro@4.15.11)(htmx.org@1.9.12):
+  /astro-htmx@1.0.6(astro@4.15.11)(htmx.org@2.0.3):
     resolution: {integrity: sha512-CSpII8wU5hsz1Q6abkKRGImOoQB+tVflZlh4wEc/lsZk4y3Mq9Z4sS9ehRvceg4UkY+6Pt64g8EOOdCCtQOBww==}
     peerDependencies:
       astro: '>= 3.0.0'
       htmx.org: '>= 1.9.0'
     dependencies:
       astro: 4.15.11(typescript@5.6.2)
-      htmx.org: 1.9.12
+      htmx.org: 2.0.3
     dev: false
 
   /astro@4.15.11(typescript@5.6.2):
@@ -3822,8 +3822,8 @@ packages:
     resolution: {integrity: sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg==}
     dev: false
 
-  /htmx.org@1.9.12:
-    resolution: {integrity: sha512-VZAohXyF7xPGS52IM8d1T1283y+X4D+Owf3qY1NZ9RuBypyu9l8cGsxUMAG5fEAb/DhT7rDoJ9Hpu5/HxFD3cw==}
+  /htmx.org@2.0.3:
+    resolution: {integrity: sha512-AeoJUAjkCVVajbfKX+3sVQBTCt8Ct4lif1T+z/tptTXo8+8yyq3QIMQQe/IT+R8ssfrO1I0DeX4CAronzCL6oA==}
     dev: false
 
   /http-cache-semantics@4.1.1:
