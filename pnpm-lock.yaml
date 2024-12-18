@@ -13,7 +13,7 @@ dependencies:
     version: 0.9.3(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.6.3)
   '@astrojs/node':
     specifier: 8.3.4
-    version: 8.3.4(astro@4.16.16)
+    version: 8.3.4(astro@4.16.17)
   '@types/alpinejs':
     specifier: 3.13.11
     version: 3.13.11
@@ -21,11 +21,11 @@ dependencies:
     specifier: 3.14.5
     version: 3.14.5
   astro:
-    specifier: 4.16.16
-    version: 4.16.16(typescript@5.6.3)
+    specifier: 4.16.17
+    version: 4.16.17(typescript@5.6.3)
   astro-htmx:
     specifier: 1.0.6
-    version: 1.0.6(astro@4.16.16)(htmx.org@1.9.12)
+    version: 1.0.6(astro@4.16.17)(htmx.org@1.9.12)
   graphql:
     specifier: 16.9.0
     version: 16.9.0
@@ -200,12 +200,12 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/node@8.3.4(astro@4.16.16):
+  /@astrojs/node@8.3.4(astro@4.16.17):
     resolution: {integrity: sha512-xzQs39goN7xh9np9rypGmbgZj3AmmjNxEMj9ZWz5aBERlqqFF3n8A/w/uaJeZ/bkHS60l1BXVS0tgsQt9MFqBA==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
-      astro: 4.16.16(typescript@5.6.3)
+      astro: 4.16.17(typescript@5.6.3)
       send: 0.19.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -2502,18 +2502,18 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /astro-htmx@1.0.6(astro@4.16.16)(htmx.org@1.9.12):
+  /astro-htmx@1.0.6(astro@4.16.17)(htmx.org@1.9.12):
     resolution: {integrity: sha512-CSpII8wU5hsz1Q6abkKRGImOoQB+tVflZlh4wEc/lsZk4y3Mq9Z4sS9ehRvceg4UkY+6Pt64g8EOOdCCtQOBww==}
     peerDependencies:
       astro: '>= 3.0.0'
       htmx.org: '>= 1.9.0'
     dependencies:
-      astro: 4.16.16(typescript@5.6.3)
+      astro: 4.16.17(typescript@5.6.3)
       htmx.org: 1.9.12
     dev: false
 
-  /astro@4.16.16(typescript@5.6.3):
-    resolution: {integrity: sha512-H1CttrV6+JFrDBQx0Mcbq5i5AeLhCbztB786+9wEu3svWL/QPNeCGqF0dgNORAYmP+rODGCPu/y9qKSh87iLuA==}
+  /astro@4.16.17(typescript@5.6.3):
+    resolution: {integrity: sha512-OuD+BP7U6OqQLKtZ/FJkU2S+TOlifxS/OKUbZOb5p6y+LLBa1J3zHRJrIl7DUSq6eXY+9wSWwbJpD9JS+lqhxA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
