@@ -17,7 +17,7 @@
     "@astrojs/node": "8.3.4",
     "@types/alpinejs": "3.13.11",
     "alpinejs": "3.14.5",
-    "astro": "4.16.17",
+    "astro": "4.16.18",
     "astro-htmx": "1.0.6",
     "graphql": "16.9.0",
     "htmx.org": "1.9.12",
