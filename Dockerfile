@@ -15,7 +15,7 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 COPY . .
 RUN pnpm run build
 
-FROM node:20.18.1-bookworm-slim@sha256:f44fa8d6d0ef15fe252459ac5d3d178362231a7948d7d07e147bae891006e2e5 AS runtime
+FROM node:20.18.1-bookworm-slim@sha256:b2c8e0eb8a6aeeae33b2711f8f516003e27ee45804e270468d937b3214f2f0cc AS runtime
 RUN apt update && apt install -y --no-install-recommends dumb-init
 WORKDIR /usr/src/app
 
