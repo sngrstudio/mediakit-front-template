@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@astrojs/alpinejs':
-    specifier: 0.4.0
-    version: 0.4.0(@types/alpinejs@3.13.11)(alpinejs@3.14.5)
+    specifier: 0.4.3
+    version: 0.4.3(@types/alpinejs@3.13.11)(alpinejs@3.14.5)
   '@astrojs/check':
     specifier: 0.9.3
     version: 0.9.3(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.6.3)
@@ -100,8 +100,8 @@ packages:
       - encoding
     dev: true
 
-  /@astrojs/alpinejs@0.4.0(@types/alpinejs@3.13.11)(alpinejs@3.14.5):
-    resolution: {integrity: sha512-68BY1CA0XuielLW3WdX2sfh9F4sSTnFqQ//IE9AditbiYJ77HJDb4uZx07pTFDtr1jOMU7lCvH+iS9gmNafM1g==}
+  /@astrojs/alpinejs@0.4.3(@types/alpinejs@3.13.11)(alpinejs@3.14.5):
+    resolution: {integrity: sha512-Us4nqkjcn5FUK/0OcZPN9eRjT8IQVBJxPdZ5JlzScy1F6+twYThBy29lyM8rYwI2kNZFde+V6mSws2w4Vqv7uw==}
     peerDependencies:
       '@types/alpinejs': ^3.0.0
       alpinejs: ^3.0.0
